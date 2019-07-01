@@ -1,0 +1,18 @@
+0 0 A r q1
+0 1 B r q1
+
+q1 * * r q1
+q1 _ _ l q2
+
+q2 0 _ r q3
+q2 1 _ r q5
+q2 B _ r q7
+q2 A _ r q6
+
+q3 _ 0 l q4
+
+q4 _ _ l q2
+q5 _ 1 l q4
+
+q6 _ 0 l halt-accept
+q7 _ 1 l halt-accept

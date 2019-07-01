@@ -1,0 +1,6 @@
+0 * * r 0
+0 _ _ l q1
+
+; se achar um '1' já pode terminar o processamento e aceitar direto após trocar seu valor para '0'
+q1 1 0 l halt-accept
+q1 0 1 l q1

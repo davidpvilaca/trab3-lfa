@@ -1,0 +1,6 @@
+0 * * r 0
+0 _ _ l q1
+
+q1 1 0 l q1
+q1 _ 1 l halt-accept
+q1 0 1 l halt-accept
