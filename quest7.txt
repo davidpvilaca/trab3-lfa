@@ -13,3 +13,34 @@ q2 _ _ r halt-reject
 
 q3 * * l q3
 q3 _ _ r 0
+
+
+
+
+
+
+
+
+
+
+digraph finite_state_machine {
+	rankdir=LR size="8,5"
+	node [shape=doublecircle]
+	qf
+	node [shape=circle]
+	q0 -> q0 [label = "(*,*,r)"]
+	q0 -> q1 [label = "(a,A,r)"]
+	q0 -> q2 [label = "(b,B,r)"]
+	q0 -> qf [label = "(_,_,r)"]
+	
+	q1 -> q1 [label = "(*,*,r)"]
+	q1 -> q3 [label = "(b,B,l)"]
+	q1 -> d [label = "(_,_,r)"]
+	
+	q2 -> q2 [label = "(*,*,r)"]
+	q2 -> q3 [label = "(a,A,l)"]
+	q2 -> d [label = "(_,_,r)"]
+	
+	q3 -> q3 [label = "(*,*,l)"]
+	q3 -> q0 [label = "(_,_,r)"]	
+}

@@ -19,3 +19,37 @@ q5 * * l q5
 	
 q6 * * l q6
 q6 _ _ r 0
+
+
+
+
+
+
+
+digraph finite_state_machine {
+	rankdir=LR size="8,5"
+	node [shape=doublecircle]
+	q0
+	node [shape=circle]
+	q0 -> q1 [label = "(a,' ',r)"]
+	q0 -> q3 [label = "(b,' ',r)"]
+	q0 -> q0 [label = "(' ',' ',r)"]
+	
+	q1 -> q1 [label = "(*,*,r)"]
+	q1 -> q2 [label = "(_,_,l)"]
+	
+	q2 -> q6 [label = "(a,' ',l)"]
+	q2 -> d [label = "(*,*,r)"]
+	
+	q3 -> q3 [label = "(*,*,r)"]
+	q3 -> q4 [label = "(' ',' ',l)"]
+	
+	q4 -> d [label = "(*,*,r)"]
+	q4 -> q5 [label = "(b,' ',l)"]
+	
+	q5 -> q0 [label = "(' ',' ',r)"]
+	q5 -> q5 [label = "(*,*,l)"]
+	
+	q6 -> q6 [label = "(*,*,l)"]
+	q6 -> q0 [label = "(' ',' ',r)"]
+}
