@@ -12,21 +12,3 @@ s2 A A r 0
 qf B B r qf
 qf 1 1 r halt-reject
 qf _ _ r halt-accept
-
-
-
-
-digraph finite_state_machine {
-	rankdir=LR size="8,5"
-	node [shape=doublecircle]
-	qf
-	node [shape=circle]
-	q0 -> q1 [label="(0,A, d)"]
-	q0 -> q3 [label="(B,B, d)"]
-	q1 -> q1      [label="(*,*, d)"]
-	q1 -> q2      [label="(1,1, e)"]
-	q2 -> q2      [label="(*,*, d)"]
-	q2 -> q0 [label="(A,A, d)"]
-	q3 -> q3      [label="(B,B, d)"]
-	q3 -> qf  [label="(' ',' ', d)"]
-}

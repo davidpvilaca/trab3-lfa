@@ -16,35 +16,3 @@ q4 _ a l q5
 
 q5 * * l q5
 q5 A a l q1
-
-
-
-
-
-
-
-digraph finite_state_machine {
-	rankdir=LR size="8,5"
-	node [shape=doublecircle]
-	qf
-	node [shape=circle]
-	q0 -> q0 [label = "(*,*,r)"]
-	q0 -> q1 [label = "(_,_,l)"]
-	
-	q1 -> q2 [label = "(b,B,r)"]
-	q1 -> q4 [label = "(a,A,r)"]
-	q1 -> qf [label = "(_,_,l)"]
-	
-	q2 -> q2 [label = "(*,*,r)"]
-	q2 -> q3 [label = "(_,b,l)"]
-	
-	q3 -> q3 [label = "(*,*,l)"]
-	q3 -> q1 [label = "(B,b,l)"]
-	
-	q4 -> q4 [label = "(*,*,r)"]
-	q4 -> q5 [label = "(_,a,l)"]
-	
-	q5 -> q5 [label = "(*,*,l)"]
-	q5 -> q1 [label = "(A,a,l)"]
-	
-}

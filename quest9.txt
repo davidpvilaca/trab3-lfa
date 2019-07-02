@@ -4,21 +4,3 @@
 ; se achar um '1' já pode terminar o processamento e aceitar direto após trocar seu valor para '0'
 q1 1 0 l halt-accept
 q1 0 1 l q1
-
-
-
-
-
-
-digraph finite_state_machine {
-	rankdir=LR size="8,5"
-	node [shape=doublecircle]
-	qf
-	node [shape=circle]
-
-	q0 -> q0 [label = "(*,*,r)"]
-	q0 -> q1 [label = "(_,_,l)"]
-	
-	q1 -> q1 [label = "(0,1,l)"]
-	q1 -> qf [label = "(1,0,l)"]
-}
